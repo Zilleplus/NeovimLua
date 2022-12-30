@@ -46,9 +46,16 @@ return require('packer').startup(function(use)
     -- Snippets
     {'L3MON4D3/LuaSnip'},
     {'rafamadriz/friendly-snippets'},
+
+    -- inlay hints
+    {'lvimuser/lsp-inlayhints.nvim'}
   },
 
-  use {'p00f/clangd_extensions.nvim'}
+  use {'p00f/clangd_extensions.nvim'},
+
+  use {'jpalardy/vim-slime'},
+
+  use {'nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'}}
 }
 
   -- Automatically set up your configuration after cloning packer.nvim:
